@@ -1,0 +1,131 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us - C&J Vehicle Service Center</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .nav-toggler {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggler {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        margin-top: 10px;
+        padding: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        padding: 10px 0;
+        color: white;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="logo-container">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+          <img src="images/logo.png" alt="C&J Logo" class="logo" style="cursor: pointer;">
+          <span class="brand-name" style="margin-left: 10px; color: inherit;">C&J Vehicle Service Center</span>
+        </a>
+      </div>
+
+      <!-- Toggle Button -->
+      <button class="nav-toggler" data-nav-toggler>☰</button>
+
+      <nav data-navbar>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="feedback_form.html">Feedback</a>
+        <a href="book_service.html">Book Service</a>
+        <a href="track.html">Track Status</a>
+        <a href="employee_login.html">Employee Login</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Contact Us</h1>
+      <p>We are here to help you with all your vehicle service needs.</p>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="services">
+      <div class="service-card">
+        <i class="fa fa-map-marker fa-3x"></i>
+        <h3>Address</h3>
+        <p>1234, J.L.N. Marg,<br> Jaipur, Rajasthan, 302017</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fa fa-phone fa-3x"></i>
+        <h3>Phone</h3>
+        <p>+91 98765 43210<br>+91 87654 32109</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fa fa-envelope fa-3x"></i>
+        <h3>Email</h3>
+        <p>support@cjservicecenter.com<br>info@cjservicecenter.com</p>
+      </div>
+    </section>
+
+    <!-- Google Maps Embed -->
+    <section class="gallery">
+      <h2>Visit Us</h2>
+      <div style="display: flex; justify-content: center; padding: 20px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3420.621039794565!2d75.80240007526938!3d26.850424976684355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDUxJzAxLjUiTiA3NcKwNDgnMTcuOSJF!5e1!3m2!1sen!2sin!4v1752753168450!5m2!1sen!2sin" 
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 C&J Vehicle Service Center. All rights reserved.</p>
+  </footer>
+
+  <!-- Navbar Toggle Script -->
+  <script>
+    const navbar = document.querySelector("[data-navbar]");
+    const navToggler = document.querySelector("[data-nav-toggler]");
+
+    navToggler.addEventListener("click", function () {
+      navbar.classList.toggle("active");
+      this.classList.toggle("active");
+    });
+  </script>
+</body>
+</html

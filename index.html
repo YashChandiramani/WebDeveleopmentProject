@@ -1,0 +1,215 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C&J Vehicle Service Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    .slideshow-container {
+      max-width: 1000px;
+      margin: 0 auto 30px;
+      position: relative;
+    }
+
+    .slideshow-image {
+      display: none;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    /* ---------- MOBILE NAVBAR SUPPORT ---------- */
+    .nav-toggler {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #333;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+       display: flex;
+  align-items: center;
+  gap:10px;
+    }
+
+    .logo {
+     height: auto;
+  width: 150px;
+  margin-right: 10px;
+    }
+
+    .brand-name {
+      font-family: 'Pacifico', cursive;
+      font-size: 24px;
+      margin-left: 10px;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggler {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        margin-top: 10px;
+        padding: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        padding: 10px 0;
+        color: white;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header with Responsive Navigation -->
+    <header class="navbar">
+      <div class="logo-container">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+          <img src="images/logo.png" alt="C&J Logo" class="logo" style="cursor: pointer;">
+          <span class="brand-name">C&J Vehicle Service Center</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Toggle Button -->
+      <button class="nav-toggler" data-nav-toggler>☰</button>
+
+      <!-- Navigation Links -->
+      <nav data-navbar>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="feedback_form.html">Feedback</a>
+        <a href="book_service.html">Book Service</a>
+        <a href="track.html">Track Status</a>
+        <a href="employee_login.html">Employee Login</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Your Trusted Vehicle Service Partner</h1>
+      <p>Book your vehicle service online — fast, safe, and reliable.</p>
+      <a href="book_service.html" class="btn">Get Started</a>
+    </section>
+
+    <!-- Image Slideshow -->
+    <section class="gallery">
+      <h2>Our Service Highlights</h2>
+      <div class="slideshow-container">
+        <img class="slideshow-image" src="images/work1.jpg" alt="Slide 1">
+        <img class="slideshow-image" src="images/work2.jpeg" alt="Slide 2">
+        <img class="slideshow-image" src="images/work3.jpeg" alt="Slide 3">
+        <img class="slideshow-image" src="images/work4.jpeg" alt="Slide 4">
+        <img class="slideshow-image" src="images/work5.jpg" alt="Slide 5">
+        <img class="slideshow-image" src="images/work6.jpg" alt="Slide 6">
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="service-card">
+        <i class="fa-solid fa-tools fa-3x"></i>
+        <h3>General Repair</h3>
+        <p>Reliable repair services for all types of vehicles.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-oil-can fa-3x"></i>
+        <h3>Oil Change</h3>
+        <p>Keep your engine smooth and healthy with timely oil changes.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-battery fa-3x"></i>
+        <h3>Battery Check</h3>
+        <p>Fast battery diagnostics and replacement services.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 C&J Vehicle Service Center. All rights reserved.</p>
+  </footer>
+
+  <!-- Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slideshow-image");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+
+    window.onload = showSlides;
+  </script>
+
+  <!-- Navbar Toggle Script -->
+  <script>
+    const navbar = document.querySelector("[data-navbar]");
+    const navToggler = document.querySelector("[data-nav-toggler]");
+
+    navToggler.addEventListener("click", function () {
+      navbar.classList.toggle("active");
+      this.classList.toggle("active");
+    });
+  </script>
+  <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('logout') === 'success') {
+    alert("You have been logged out successfully!");
+  }
+</script>
+<div style="display:none;">
+</div>
+</body>
+</html

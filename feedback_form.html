@@ -1,0 +1,98 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feedback - C&J Vehicle Service Center</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="logo-container">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+          <img src="images/logo.png" alt="C&J Logo" class="logo" style="cursor: pointer;">
+          <span class="brand-name" style="margin-left: 10px; color: inherit;">C&J Vehicle Service Center</span>
+        </a>
+      </div>
+
+      <!-- Toggle button -->
+      <button class="nav-toggler" data-nav-toggler aria-label="Toggle Navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <nav data-navbar>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="feedback_form.html">Feedback</a>
+        <a href="book_service.html">Book Service</a>
+        <a href="track.html">Track Status</a>
+        <a href="employee_login.html">Employee Login</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>We Value Your Feedback</h1>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section class="services">
+      <div class="service-card">
+        <form action="submit_feedback.php" method="post" style="display: flex; flex-direction: column; gap: 5px;">
+          <label for="name"><strong>Name:</strong></label>
+          <input type="text" id="name" name="name" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+
+          <label for="email_id"><strong>Email:</strong></label>
+          <input type="email" id="email" name="email_id" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+
+          <label for="rating"><strong>Rating (1 to 5):</strong></label>
+          <select id="rating" name="rating" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <option value="">Select</option>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Good</option>
+            <option value="3">3 - Average</option>
+            <option value="2">2 - Poor</option>
+            <option value="1">1 - Terrible</option>
+          </select>
+
+          <label for="message"><strong>Message:</strong></label>
+          <textarea id="message" name="message" rows="4" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+
+          <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 10px 0;">
+  <a href="feedback_customer_card.php" 
+     class="btn"
+     style="background-color: #f4a261; color: black; font-family: 'Pacifico', cursive; padding: 12px 30px; text-align: center;">
+    What Our Customers Say
+  </a>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 C&J Vehicle Service Center. All rights reserved.</p>
+  </footer>
+
+  <!-- Toggle Functionality Script -->
+  <script>
+    const navbar = document.querySelector("[data-navbar]");
+    const navToggler = document.querySelector("[data-nav-toggler]");
+
+    navToggler.addEventListener("click", function () {
+      navbar.classList.toggle("active");
+      this.classList.toggle("active");
+    });
+  </script>
+</body>
+</html

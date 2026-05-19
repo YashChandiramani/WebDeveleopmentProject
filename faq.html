@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ - C&J Vehicle Service Center</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- Main site styles -->
+  <link rel="stylesheet" href="css/faq.css">    <!-- FAQ-specific styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="logo-container">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+          <img src="images/logo.png" alt="C&J Logo" class="logo" style="cursor: pointer;">
+          <span class="brand-name" style="margin-left: 10px; color: inherit;">C&J Vehicle Service Center</span>
+        </a>
+      </div>
+
+      <!-- Toggle button for mobile -->
+      <button class="nav-toggler" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <nav id="navbar-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="feedback_form.html">Feedback</a>
+        <a href="book_service.html">Book Service</a>
+        <a href="track.html">Track Status</a>
+        <a href="employee_login.html">Employee Login</a>
+      </nav>
+    </header>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-button">How do I book a vehicle service?</button>
+          <div class="accordion-content">
+            <p>You can book a service by logging in and selecting the service you need from the dashboard. Then pick a date and time slot.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-button">What types of vehicles do you service?</button>
+          <div class="accordion-content">
+            <p>We provide services for all major vehicle types including cars, bikes, and commercial vehicles.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-button">Do you offer pickup and drop-off?</button>
+          <div class="accordion-content">
+            <p>Yes, we provide free pickup and drop-off within a 10km radius of our service center.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-button">Can I reschedule or cancel my booking?</button>
+          <div class="accordion-content">
+            <p>Yes, you can reschedule or cancel your booking at least 4 hours before your scheduled service time through your account.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-button">How can I contact customer support?</button>
+          <div class="accordion-content">
+            <p>You can reach us via the Contact Us page or by emailing support@cjservicecenter.com.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 C&J Vehicle Service Center. All rights reserved.</p>
+  </footer>
+
+  <!-- Accordion Toggle Script -->
+  <script>
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    accordionButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        button.classList.toggle('active');
+        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+      });
+    });
+
+    // Navbar toggle function
+    function toggleMenu() {
+      const nav = document.getElementById("navbar-menu");
+      nav.classList.toggle("active");
+    }
+  </script>
+</body>
+</html

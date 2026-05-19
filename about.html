@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - C&J Vehicle Service Center</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    .nav-toggler {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggler {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        margin-top: 10px;
+        padding: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        padding: 10px 0;
+        color: white;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="logo-container">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+          <img src="images/logo.png" alt="C&J Logo" class="logo" style="cursor: pointer;">
+          <span class="brand-name" style="margin-left: 10px; color: inherit;">C&J Vehicle Service Center</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Toggle Button -->
+      <button class="nav-toggler" data-nav-toggler>☰</button>
+
+      <nav data-navbar>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="feedback_form.html">Feedback</a>
+        <a href="book_service.html">Book Service</a>
+        <a href="track.html">Track Status</a>
+        <a href="employee_login.html">Employee Login</a>
+      </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="hero">
+      <h1>About Us</h1>
+      <p>Delivering excellence in vehicle service for over 15 years.</p>
+    </section>
+
+    <section class="services">
+      <div class="service-card">
+        <i class="fa fa-users fa-3x"></i>
+        <h3>Who We Are</h3>
+        <p>
+          C&J Vehicle Service Center is a team of dedicated automotive professionals
+          committed to keeping your vehicles in top shape. With certified mechanics
+          and modern equipment, we ensure reliable, honest service.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fa fa-history fa-3x"></i>
+        <h3>Our Journey</h3>
+        <p>
+          Started in 2010, we have grown into a trusted name in automotive care.
+          From a small garage to a state-of-the-art service center, our mission
+          has always remained the same — customer satisfaction first.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fa fa-star fa-3x"></i>
+        <h3>Why Choose Us?</h3>
+        <p>
+          Fast turnaround, fair pricing, transparent communication, and expert
+          staff — these are just a few reasons why our customers love us.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 C&J Vehicle Service Center. All rights reserved.</p>
+  </footer>
+
+<!-- Navbar Toggle Script -->
+  <script>
+    const navbar = document.querySelector("[data-navbar]");
+    const navToggler = document.querySelector("[data-nav-toggler]");
+
+    navToggler.addEventListener("click", function () {
+      navbar.classList.toggle("active");
+      this.classList.toggle("active");
+    });
+  </script>
+
+    <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html
